@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <!--Statement of Authorship: This webpage if designed by Ayodeji Eniabire Student ID: 000878946 for Assignment a4 on July 4, 2022-->
+        <title>Assignment_a4 Web app game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="a4css.css" type="text/css">
+        <script src="a4js.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Assignment a4</h1>
+            <h3>Ayodeji Eniabire, Student ID: 000878946</h3>
+            <img class="" src="images/sign.JPG" height="50" width="150" alt="signature" >
+        </header>
+
+        <div class="grid-container">
+
+            <div id="game-title">
+                <h2>Coin Flip Game </h2>
+            </div>
+
+            <div class="game-box">
+
+                <div id="user-input">
+
+                    <form id="username"> 
+                      <label for="user-name">Enter User Name:</label>
+                      <input type="text" id="user-name" placeholder="Enter a valid Username" required autofocus name="userid">  
+                   </form> 
+                   <p id="username-error">Invalid Username format, click help button to check for valid format</p>
+                   
+                   <div id="prefrence">
+
+                        <div id="coinchoice">
+                            <h4>Prefered coin</h4>
+                            <button id="n-coin" type="button" disabled>Naira Coin</button>
+                            <button id="d-coin" type="button" disabled>Dollar Coin</button>
+                        </div>
+
+                        <div id="playtimes">
+                            <form id="flipcount"> 
+                                <label for="flip-count">Enter Flip Rounds:</label>
+                                <input type="number" id="flip-count" placeholder="Enter number > 0" required name="flipc" disabled>  
+                            </form>
+                            <p id="fliptimes-error">Invalid input format, click help to check for valid format</p>
+                        </div> 
+
+                        <h4 id="welcome-mesg">Welcome!</h4>
+
+                    </div>
+
+                    <div id="pushstart">
+                        <button id="startbutton" type="button" disabled> Start </button>
+                    </div>
+
+                </div>
+                
+                <div id="coin-box">
+                    <div id="coin">
+                        <img id="head" src="images/default-coin.jpg" alt="head">
+                        <img id="tail" src="images/default-coin.jpg" alt="tail">
+                    </div>
+                </div>
+
+                <div id="result">
+                    <table id="score-board">
+                        <tr>
+                            <th id="head-score"> Head: 0</th>
+                        </tr>
+                        <tr>
+                            <th id="tail-score"> Tail: 0</th>
+                        </tr>
+                        <tr>
+                            <th id="final-decission"></th>
+                        </tr>
+                    </table>
+                </div>
+              
+            </div>
+
+            <div id="user-action">
+                <button id="flip" type="button" disabled> Flip Coin </button>
+
+                <button id="reset" type="reset"> Reset </button>
+
+                <button id="help" type="button">Help </button>
+            </div>
+
+            <div id="help-grid">
+                <div id="helpinfo">
+                    <h4> How to play</h4>
+                    <p>Enter a valid Username</p>
+                    <p>Select your prefared coin (Naira or Dollars)</p>
+                    <p>Enter number of times you want to flip selected coin (Number must be greater than 0)</p>
+                    <p>Click start Button</p>
+                    <p>Click on Flip Button to flip choosen coin</p>
+                    <p>After selected number of Flips, if the number of heads is higher or equals tail... you win else you lost</p>
+                    <p>click close-help to close this help info</p>
+                    <h4>Username Rules</h4>
+                    <p>Username must be letters only, and between 4 and 8 characters inclusive</p>
+                    <p>Each character in the username must be alphabetically bigger than the letter before (e.g. abcd is 
+                        a valid username, but adcb is not)
+                    </p>
+                    <p>The username must start with an uppercase letter </p>
+                    <button id="closehelp" type="button">Close-Help</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&#169; 2022 Ayodeji Eniabire </p>
+            <p> E-mail:<a href="mailto:ayodeji.eniabire@mohawkcollege.ca" title="Ayodeji Eniabire Email"> ayodeji.eniabire@mohawkcollege.ca </a></p>
+            <p>phone <a href="tel:+12895019176" title="Phone Contact"> +12895019176</a></p>
+        </footer>
+    </body>
+</html>

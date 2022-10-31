@@ -1,0 +1,241 @@
+/**
+ * CSS file for Coin Flip web app game (Assignment a4)
+ * Created by Ayodeji Eniabire, Student ID; 000878946
+ * on July 4th 2022
+ */
+
+ body{
+    background-color: antiquewhite;
+}
+
+button{
+    padding: 15px;
+    margin: 10px;
+}
+
+#coin{
+    height: 300px;
+    width: 350px;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+#coin-box{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-bottom: 20px;
+ }
+
+ #coinchoice{
+    display: flex;
+}
+
+footer{
+    text-align: center;
+    line-height: 5px;
+    font-size: small;
+    margin: 10px;
+    background-color:darkkhaki;
+    background-size: cover;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+footer a{
+    color:blueviolet;
+}
+
+#fliptimes-error, #username-error{
+    display: none;
+    color: red;
+}
+
+.game-box{
+    display: grid;
+    grid-template-columns: 25% 50% auto;
+    grid-template-rows: auto;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height:fit-content;
+}
+
+#game-title{
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+}
+
+header{
+    text-align: center; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+header h3{
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 5s steps(20, end) forwards;
+    font-size: 1.6rem;
+    width: 0;
+    color: blueviolet;
+}
+
+header img{
+    animation-name: shake;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#helpinfo{
+    display: none;
+    line-height: 5px;
+}
+
+#head, #tail{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+input{
+    padding: 10px;
+    margin: 5px;
+}
+
+#prefrence{
+    height: fit-content;
+}
+
+
+#result{
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    width: fit-content;
+    height: fit-content;
+}
+
+#tail{
+    transform: rotateX(180deg);
+}
+th{
+    padding: 10px;
+}
+
+#username{
+    height: fit-content;
+}
+
+#user-action{  
+    display: block;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+}
+
+#user-input{ 
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: auto;
+    width: fit-content;
+}
+
+#welcome-mesg{
+    display: none;
+    color: green;
+}
+
+@keyframes tail-flip{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+}
+
+@keyframes head-flip{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(2160deg);
+    }
+}
+
+@keyframes change{
+    0% {background-color:antiquewhite; }
+    100% {background-color:darksalmon; }
+}
+
+@keyframes shake{
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @media screen and (max-width: 599px) {
+    .game-box{
+        display: list-item;
+        margin: 0;
+    }
+  
+    th{
+        padding: 0%;
+    }
+
+    #helpinfo{
+        line-height: normal;
+        font-size: small;
+    }
+
+    header h3{
+        white-space: normal; 
+    }
+
+    button{
+        padding: 5px;
+    }
+
+    #coin-box{
+        text-align: center;
+    }
+
+    #user-action, #game-title, #coin{
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 999px) and (min-width: 600px) {
+    .game-box{
+        display: list-item;
+        margin: 0;
+    }
+
+
+}
+
+
+
+
+
